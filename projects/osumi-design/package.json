@@ -1,12 +1,32 @@
 {
-  "name": "osumi-design",
+  "name": "@osumi/design",
   "version": "0.0.1",
+  "description": "Osumi Design components for Angular projects.",
+  "author": "Iñigo Gorosabel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osumionline/Osumi-Design/issues"
+  },
+  "homepage": "https://github.com/osumionline/Osumi-Design#readme",
+  "main": "fesm2022/osumi-design.mjs",
+  "module": "fesm2022/osumi-design.mjs",
+  "types": "index.d.ts",
   "peerDependencies": {
     "@angular/common": "^19.0.0",
-    "@angular/core": "^19.0.0"
+    "@angular/core": "^19.0.0",
+    "@angular/forms": "^19.0.0",
+    "@angular-devkit/schematics": "^19.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "schematics": "./schematics/collection.json",
+  "ng-update": {
+    "migrations": "./schematics/migrations/migrations.json"
+  }
 }

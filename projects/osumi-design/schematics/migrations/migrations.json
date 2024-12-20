@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "osumi-design-0-0-1": {
+      "description": "Primera versión",
+      "version": "0.0.1",
+      "factory": "./noop/index#noop"
+    }
+  }
+}

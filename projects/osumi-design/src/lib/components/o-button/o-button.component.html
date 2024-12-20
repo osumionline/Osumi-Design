@@ -1,0 +1,10 @@
+@if (href().length === 0) {
+<button [class]="buttonClass()"
+        [type]="type()"
+        [disabled]="disabled() || loading()"
+        [name]="name()"
+        [id]="id()">
+    <ng-content></ng-content>
+</button>
+}
+@else {}
