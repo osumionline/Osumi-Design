@@ -1,4 +1,5 @@
 import { Component, computed, input, InputSignal, Signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import {
   OButtonClassInterface,
   OButtonDisabledInterface,
@@ -6,11 +7,12 @@ import {
   OButtonNameInterface,
   OButtonTypeInterface,
 } from '../../interfaces/o-button.interfaces';
+import { OLoadingComponent } from '../o-loading/o-loading.component';
 
 @Component({
   selector: 'o-button',
   templateUrl: './o-button.component.html',
-  imports: [],
+  imports: [OLoadingComponent, RouterLink],
   styleUrl: './o-button.component.scss',
 })
 export class OButtonComponent {
