@@ -7,9 +7,7 @@ buttonClass: {{ buttonClass() | json }}
    [name]="name()"
    [id]="id()">
     @if (loading()) {
-    <span class="loading">
-        <o-loading />
-    </span>
+    <o-loading class="loading" />
     }
     <ng-content></ng-content>
 </a>

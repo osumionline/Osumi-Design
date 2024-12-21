@@ -1,17 +1,35 @@
 .o-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+    box-sizing: border-box;
+    color: #1a1a1a;
+    cursor: pointer;
     font-size: 16px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     letter-spacing: 2px;
-    line-height: 1.5;
-    cursor: pointer;
-    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    min-height: 38px;
+    transition: all .4s ease;
+    display: inline-flex;
+    padding: 6px 8px;
+    background: none;
+    border: 1px solid #1a1a1a;
+    line-height: 1.45;
+    outline: 0;
     text-decoration: none;
 
     &:hover {
-        background-color: #0056b3;
+        background-color: #000;
+        color: #fff;
+    }
+
+    &.o-button-disabled {
+        background-color: #ccc !important;
+        color: #000;
+        cursor: default;
+    }
+
+    .loading {
+        margin-right: 8px;
     }
 }
