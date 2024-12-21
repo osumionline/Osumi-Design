@@ -1,8 +1,17 @@
 <p>home works!</p>
-<o-button (click)="alert('hi!')"
-          class="another"
-          [loading]="loading()">Click me!</o-button>
 
-<o-button href="[]"
-          class="another"
-          [loading]="loading()">Click me!</o-button>
+<p>
+    <o-button (click)="toggleLoading()"
+              class="another"
+              [loading]="loading()">
+        button!
+    </o-button>
+</p>
+
+<p>
+    <o-button-link [href]="['/component', 'o-button']"
+                   class="another"
+                   [loading]="loading()">
+        link!
+    </o-button-link>
+</p>

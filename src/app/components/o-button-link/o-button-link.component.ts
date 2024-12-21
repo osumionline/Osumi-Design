@@ -11,12 +11,12 @@ import {
 import { OLoadingComponent } from '../o-loading/o-loading.component';
 
 @Component({
-  selector: 'o-button',
-  templateUrl: './o-button.component.html',
+  selector: 'o-button-link',
+  templateUrl: './o-button-link.component.html',
   imports: [OLoadingComponent, RouterLink, JsonPipe],
-  styleUrl: './o-button.component.scss',
+  styleUrl: './o-button-link.component.scss',
 })
-export class OButtonComponent {
+export class OButtonLinkComponent {
   type: InputSignal<OButtonTypeInterface> =
     input<OButtonTypeInterface>('button');
   disabled: InputSignal<OButtonDisabledInterface> =
@@ -26,7 +26,10 @@ export class OButtonComponent {
   class: InputSignal<OButtonClassInterface> = input<OButtonClassInterface>('');
 
   buttonClass: Signal<OButtonClassInterface> = computed(
-    (): OButtonClassInterface => `o-button ${this.class()}`
+    (): OButtonClassInterface =>
+      'o-button ' +
+      this.class() +
+      (this.loading() || this.disabled() ? ' o-button-disabled' : '')
   );
 
   href: InputSignal<string[]> = input<string[]>([]);

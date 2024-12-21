@@ -1,0 +1,15 @@
+loading: {{ loading() | json }}
+<br>
+buttonClass: {{ buttonClass() | json }}
+<br>
+<a [routerLink]="!loading() ? href() : '#'"
+   [class]="buttonClass()"
+   [name]="name()"
+   [id]="id()">
+    @if (loading()) {
+    <span class="loading">
+        <o-loading />
+    </span>
+    }
+    <ng-content></ng-content>
+</a>

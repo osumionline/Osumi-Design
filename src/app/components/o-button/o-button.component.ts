@@ -1,6 +1,5 @@
 import { JsonPipe } from '@angular/common';
 import { Component, computed, input, InputSignal, Signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import {
   OButtonClassInterface,
   OButtonDisabledInterface,
@@ -13,7 +12,7 @@ import { OLoadingComponent } from '../o-loading/o-loading.component';
 @Component({
   selector: 'o-button',
   templateUrl: './o-button.component.html',
-  imports: [OLoadingComponent, RouterLink, JsonPipe],
+  imports: [OLoadingComponent, JsonPipe],
   styleUrl: './o-button.component.scss',
 })
 export class OButtonComponent {
@@ -26,9 +25,11 @@ export class OButtonComponent {
   class: InputSignal<OButtonClassInterface> = input<OButtonClassInterface>('');
 
   buttonClass: Signal<OButtonClassInterface> = computed(
-    (): OButtonClassInterface => `o-button ${this.class()}`
+    (): OButtonClassInterface =>
+      'o-button ' +
+      this.class() +
+      (this.loading() || this.disabled() ? ' o-button-disabled' : '')
   );
 
-  href: InputSignal<string[]> = input<string[]>([]);
   loading: InputSignal<boolean> = input<boolean>(false);
 }

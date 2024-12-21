@@ -1,3 +1,9 @@
+loading: {{ loading() | json }}
+<br>
+buttonClass: {{ buttonClass() | json }}
+<br>
+content: "<ng-content></ng-content>"
+<br>
 @if (href().length === 0) {
 <button [class]="buttonClass()"
         [class]="{'o-button-disabled': loading() || disabled()}"
