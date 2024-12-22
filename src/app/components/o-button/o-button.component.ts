@@ -1,4 +1,3 @@
-import { JsonPipe } from '@angular/common';
 import { Component, computed, input, InputSignal, Signal } from '@angular/core';
 import {
   OButtonClassInterface,
@@ -12,8 +11,7 @@ import { OLoadingComponent } from '../o-loading/o-loading.component';
 @Component({
   selector: 'o-button',
   templateUrl: './o-button.component.html',
-  imports: [OLoadingComponent, JsonPipe],
-  styleUrl: './o-button.component.scss',
+  imports: [OLoadingComponent],
 })
 export class OButtonComponent {
   type: InputSignal<OButtonTypeInterface> =
@@ -32,4 +30,16 @@ export class OButtonComponent {
   );
 
   loading: InputSignal<boolean> = input<boolean>(false);
+
+  onClick(event: MouseEvent): void {
+    if (this.disabled() || this.loading()) {
+      event.stopPropagation(); // Prevents click event when disabled or loading
+      event.preventDefault(); // Prevents default action of the click event
+      return;
+    }
+
+    // Continue with the click functionality if the button is enabled
+    console.log('Button clicked!');
+    // You can add your custom event emit here if needed
+  }
 }

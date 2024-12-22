@@ -3,20 +3,34 @@
 <p>
     <o-button (click)="toggleLoading()"
               class="another"
-              [loading]="loading()">
+              [loading]="loading()"
+              [oBadge]="badgeValue()">
         button!
     </o-button>
 </p>
 
 <p>
     <o-button (click)="toggleLoading()">
-        toggle!
+        toggle
+    </o-button>
+</p>
+
+<p>
+    <o-button (click)="changeBadge(1)">
+        up!
+    </o-button>
+</p>
+
+<p>
+    <o-button (click)="changeBadge(-1)">
+        down!
     </o-button>
 </p>
 
 <p>
     <o-button-link [href]="['/component', 'o-button']"
                    class="another"
+                   [targetBlank]="false"
                    [loading]="loading()">
         link!
     </o-button-link>

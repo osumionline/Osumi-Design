@@ -1,14 +1,13 @@
-loading: {{ loading() | json }}
-<br>
-buttonClass: {{ buttonClass() | json }}
-<br>
-<button [class]="buttonClass()"
-        [type]="type()"
-        [disabled]="disabled() || loading()"
-        [name]="name()"
-        [id]="id()">
-    @if (loading()) {
-    <o-loading class="loading" />
-    }
-    <ng-content></ng-content>
-</button>
+<div class="o-button-wrapper"
+     (click)="onClick($event)">
+    <button [class]="buttonClass()"
+            [type]="type()"
+            [disabled]="disabled() || loading()"
+            [name]="name()"
+            [id]="id()">
+        @if (loading()) {
+        <o-loading class="loading" />
+        }
+        <ng-content></ng-content>
+    </button>
+</div>

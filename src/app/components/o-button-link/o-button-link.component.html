@@ -1,11 +1,8 @@
-loading: {{ loading() | json }}
-<br>
-buttonClass: {{ buttonClass() | json }}
-<br>
-<a [routerLink]="!loading() ? href() : '#'"
+<a [routerLink]="href()"
    [class]="buttonClass()"
    [name]="name()"
-   [id]="id()">
+   [id]="id()"
+   [target]="targetBlank() ? '_blank' : '_self'">
     @if (loading()) {
     <o-loading class="loading" />
     }

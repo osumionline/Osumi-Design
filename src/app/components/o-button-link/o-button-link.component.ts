@@ -1,4 +1,3 @@
-import { JsonPipe } from '@angular/common';
 import { Component, computed, input, InputSignal, Signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
@@ -13,8 +12,7 @@ import { OLoadingComponent } from '../o-loading/o-loading.component';
 @Component({
   selector: 'o-button-link',
   templateUrl: './o-button-link.component.html',
-  imports: [OLoadingComponent, RouterLink, JsonPipe],
-  styleUrl: './o-button-link.component.scss',
+  imports: [OLoadingComponent, RouterLink],
 })
 export class OButtonLinkComponent {
   type: InputSignal<OButtonTypeInterface> =
@@ -24,6 +22,7 @@ export class OButtonLinkComponent {
   name: InputSignal<OButtonNameInterface> = input<OButtonNameInterface>('');
   id: InputSignal<OButtonIdInterface> = input<OButtonIdInterface>('');
   class: InputSignal<OButtonClassInterface> = input<OButtonClassInterface>('');
+  targetBlank: InputSignal<boolean> = input<boolean>(false);
 
   buttonClass: Signal<OButtonClassInterface> = computed(
     (): OButtonClassInterface =>

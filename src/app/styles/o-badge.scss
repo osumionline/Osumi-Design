@@ -1,0 +1,26 @@
+.o-badge-wrapper {
+    position: relative;
+}
+
+.o-badge-content {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    line-height: 16px;
+    padding: 0 4px;
+    font-size: .688rem;
+    left: 94%;
+    bottom: 100%;
+    text-align: center;
+    display: inline-block;
+    transition: transform 200ms ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+    background-color: #ba1a1a;
+    color: #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
