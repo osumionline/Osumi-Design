@@ -1,0 +1,20 @@
+<o-list>
+    @for (item of list; track item.tag) {
+    <o-list-item>
+        <a [routerLink]="['/component', item.tag]"
+           [title]="item.title">
+            {{ item.name }}
+        </a>
+    </o-list-item>
+    @for (subitem of item.children; track subitem.tag) {
+    @if (subitem.visible) {
+    <o-list-item>
+        <a [routerLink]="['/component', subitem.tag]"
+           [title]="subitem.title">
+            {{ subitem.name }}
+        </a>
+    </o-list-item>
+    }
+    }
+    }
+</o-list>

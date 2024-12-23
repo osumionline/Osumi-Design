@@ -1,0 +1,9 @@
+<button [class]="buttonClass()"
+        [disabled]="disabled() || loading()">
+    @if (!loading()) {
+    <o-icon [src]="src()" />
+    }
+    @else {
+    <o-loading />
+    }
+</button>

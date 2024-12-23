@@ -1,0 +1,14 @@
+<p>
+    <o-button-link [href]="['/component', 'o-button']"
+                   class="another"
+                   [targetBlank]="false"
+                   [loading]="loading()">
+        link!
+    </o-button-link>
+</p>
+
+<p>
+    <o-button (click)="toggleLoading()">
+        toggle loading!
+    </o-button>
+</p>

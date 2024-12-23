@@ -1,0 +1,13 @@
+main {
+    display: flex;
+    margin-top: 16px;
+
+    aside {
+        width: 200px;
+    }
+
+    section {
+        flex: 1;
+        margin: 0 16px;
+    }
+}

@@ -1,0 +1,11 @@
+@if (isSVG) {
+@if (iconSVG$ | async; as img) {
+<div [innerHTML]="img"></div>
+}
+}
+@else {
+@if (iconImage$ | async; as img) {
+<img [src]="img"
+     alt="">
+}
+}

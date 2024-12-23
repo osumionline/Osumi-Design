@@ -1,0 +1,26 @@
+<p>
+    <o-button (click)="toggleLoading()"
+              class="another"
+              [loading]="loading()"
+              [oBadge]="badgeValue()">
+        button!
+    </o-button>
+</p>
+
+<p>
+    <o-button (click)="toggleLoading()">
+        toggle
+    </o-button>
+</p>
+
+<p>
+    <o-button (click)="changeBadge(1)">
+        up!
+    </o-button>
+</p>
+
+<p>
+    <o-button (click)="changeBadge(-1)">
+        down!
+    </o-button>
+</p>

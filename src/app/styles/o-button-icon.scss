@@ -1,0 +1,27 @@
+.o-button-icon {
+    background-color: #fff;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+
+    &:active {
+        scale: 0.9;
+    }
+
+    &:disabled {
+        background-color: #ccc !important;
+        color: #000;
+        cursor: default;
+        pointer-events: none;
+    }
+}
