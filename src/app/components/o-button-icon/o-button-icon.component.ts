@@ -1,4 +1,5 @@
 import { Component, computed, input, InputSignal, Signal } from '@angular/core';
+import { OButtonClassInterface } from '../../interfaces/o-button.interfaces';
 import { OIconComponent } from '../o-icon/o-icon.component';
 import { OLoadingComponent } from '../o-loading/o-loading.component';
 
@@ -11,9 +12,12 @@ export class OButtonIconComponent {
   src: InputSignal<string> = input.required<string>();
   disabled: InputSignal<boolean> = input<boolean>(false);
   loading: InputSignal<boolean> = input<boolean>(false);
+  class: InputSignal<OButtonClassInterface> = input<OButtonClassInterface>('');
 
   buttonClass: Signal<string> = computed(
     (): string =>
-      'o-button-icon ' + (this.disabled() ? ' o-button-icon-disabled' : '')
+      'o-button-icon ' +
+      this.class() +
+      (this.disabled() ? ' o-button-icon-disabled' : '')
   );
 }

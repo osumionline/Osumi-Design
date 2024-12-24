@@ -12,4 +12,6 @@ export default class OButton implements DesignComponentInterface {
     new OButtonLink(),
     new OButtonIcon(),
   ];
+
+  visible: boolean = false;
 }

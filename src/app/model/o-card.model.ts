@@ -14,4 +14,6 @@ export default class OCard implements DesignComponentInterface {
     new OCardContent(),
     new OCardFooter(),
   ];
+
+  visible: boolean = false;
 }

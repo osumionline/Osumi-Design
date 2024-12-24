@@ -5,6 +5,13 @@
            [title]="item.title">
             {{ item.name }}
         </a>
+        @if (item.children.length > 0) {
+        <span class="o-list-item-last">
+            <o-button-icon src="img/expand.svg"
+                           (click)="toggle(item)"
+                           class="menu-icon" />
+        </span>
+        }
     </o-list-item>
     @for (subitem of item.children; track subitem.tag) {
     @if (subitem.visible) {

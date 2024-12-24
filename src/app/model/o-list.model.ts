@@ -8,4 +8,6 @@ export default class OList implements DesignComponentInterface {
   public description: string =
     'Este componente crea un contenedor para crear listados.';
   public children: DesignComponentInterface[] = [new OListItem()];
+
+  visible: boolean = false;
 }
