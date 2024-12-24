@@ -11,8 +11,8 @@
     line-height: 16px;
     padding: 0 4px;
     font-size: .688rem;
-    left: 94%;
-    bottom: 100%;
+    left: calc(100% - 8px);
+    bottom: calc(100% - 8px);
     text-align: center;
     display: inline-block;
     transition: transform 200ms ease-in-out;

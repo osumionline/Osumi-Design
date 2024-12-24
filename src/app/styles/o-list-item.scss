@@ -30,6 +30,20 @@
                 color: #000;
                 background-color: rgba(0, 0, 0, 0.1);
             }
+
+            &.o-list-item-sub {
+                position: relative;
+                padding-left: 32px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 16px;
+                    width: 2px;
+                    height: 100%;
+                    background-color: #000;
+                }
+            }
         }
     }
 }

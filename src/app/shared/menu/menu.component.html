@@ -9,7 +9,7 @@
         <span class="o-list-item-last">
             <o-button-icon src="img/expand.svg"
                            (click)="toggle(item)"
-                           class="menu-icon" />
+                           [class]="'menu-icon ' + (item.visible ? 'menu-icon-deployed' : '')" />
         </span>
         }
     </o-list-item>
@@ -17,7 +17,8 @@
     @if (subitem.visible) {
     <o-list-item>
         <a [routerLink]="['/component', subitem.tag]"
-           [title]="subitem.title">
+           [title]="subitem.title"
+           class="o-list-item-sub">
             {{ subitem.name }}
         </a>
     </o-list-item>

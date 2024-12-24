@@ -1,1 +1,16 @@
-<p>o-badge-docs works!</p>
+<p class="description"
+   [oBadge]="badgeValue()">
+    <b>Badge</b> is a small status descriptor for UI elements. It can be used to show a status or a count of items.
+</p>
+
+<p>
+    <o-button (click)="changeBadge(1)">
+        up!
+    </o-button>
+</p>
+
+<p>
+    <o-button (click)="changeBadge(-1)">
+        down!
+    </o-button>
+</p>

@@ -1,12 +1,5 @@
 import { Component, computed, input, InputSignal, Signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import {
-  OButtonClassInterface,
-  OButtonDisabledInterface,
-  OButtonIdInterface,
-  OButtonNameInterface,
-  OButtonTypeInterface,
-} from '../../interfaces/o-button.interfaces';
 import { OLoadingComponent } from '../o-loading/o-loading.component';
 
 @Component({
@@ -15,17 +8,14 @@ import { OLoadingComponent } from '../o-loading/o-loading.component';
   imports: [OLoadingComponent, RouterLink],
 })
 export class OButtonLinkComponent {
-  type: InputSignal<OButtonTypeInterface> =
-    input<OButtonTypeInterface>('button');
-  disabled: InputSignal<OButtonDisabledInterface> =
-    input<OButtonDisabledInterface>(false);
-  name: InputSignal<OButtonNameInterface> = input<OButtonNameInterface>('');
-  id: InputSignal<OButtonIdInterface> = input<OButtonIdInterface>('');
-  class: InputSignal<OButtonClassInterface> = input<OButtonClassInterface>('');
+  disabled: InputSignal<boolean> = input<boolean>(false);
+  name: InputSignal<string> = input<string>('');
+  id: InputSignal<string | number> = input<string | number>('');
+  class: InputSignal<string> = input<string>('');
   targetBlank: InputSignal<boolean> = input<boolean>(false);
 
-  buttonClass: Signal<OButtonClassInterface> = computed(
-    (): OButtonClassInterface =>
+  buttonClass: Signal<string> = computed(
+    (): string =>
       'o-button ' +
       this.class() +
       (this.loading() || this.disabled() ? ' o-button-disabled' : '')
