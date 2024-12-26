@@ -61,8 +61,8 @@ export default class OTabsDocsComponent {
 </o-tabs>
 <p>Selected tab: {{ selectedTab }}</p>`,
     codeTS: `import { Component, signal, WritableSignal } from '@angular/core';
-import { OTabComponent } from '@osumi/design/o-tab/o-tab.component';
-import { OTabsComponent } from '@osumi/design/o-tabs/o-tabs.component';
+import { OTabComponent } from '@osumi/design';
+import { OTabsComponent } from '@osumi/design';
 
 @Component({
   selector: 'o-tabs-example',
@@ -73,7 +73,7 @@ import { OTabsComponent } from '@osumi/design/o-tabs/o-tabs.component';
   templateUrl: './o-tabs-example.component.html',
   styleUrl: './o-tabs-example.component.scss',
 })
-export default class OTabsDocsComponent {
+export default class OTabsExampleComponent {
   selectedTab: WritableSignal<number> = signal<number>(0);
 
   onTabSelected(ind: number): void {

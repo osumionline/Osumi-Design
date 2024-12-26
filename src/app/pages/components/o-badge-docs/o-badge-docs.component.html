@@ -1,16 +1,64 @@
-<p class="description"
-   [oBadge]="badgeValue()">
-    <b>Badge</b> is a small status descriptor for UI elements. It can be used to show a status or a count of items.
-</p>
+<o-tabs>
+    <o-tab label="Descripción">
+        <h1>OBadge</h1>
 
-<p>
-    <o-button (click)="changeBadge(1)">
-        up!
-    </o-button>
-</p>
+        <p>
+            OBadge es una directiva que permite mostrar un pequeño indicador de estado en elementos de la interfaz de usuario. Se puede usar para mostrar un estado o un conteo de elementos y permite ser usado no solo en componentes de Osumi Design, sino en cualquier tipo de contenido HTML.
+        </p>
 
-<p>
-    <o-button (click)="changeBadge(-1)">
-        down!
-    </o-button>
-</p>
+        <pre class="code-sample"><code [highlightAuto]="code" lineNumbers></code></pre>
+
+        <p>El contenido del badge se actualiza en tiempo real y se muestra en caso de que su valor sea 0.</p>
+    </o-tab>
+    <o-tab label="API">
+        <h1>Referencia de API para OTabs</h1>
+
+        <div class="code-sample text">
+            import &#123; OBadgeDirective &#125; from '&#64;osumi/design';
+        </div>
+
+        <p>
+            <strong>OBadgeDirective</strong>: Directiva que muestra el badge.
+        </p>
+
+        <table class="api-properties-table">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-property">
+                        <div class="property-type">&#64;Input()</div>
+                        <div class="property-name">value: string</div>
+                    </td>
+                    <td class="col-description">
+                        Valor del badge.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </o-tab>
+    <o-tab label="Ejemplos">
+        <h1>Ejemplos</h1>
+
+        <o-code-content [data]="exampleData">
+            <p class="description"
+               [oBadge]="badgeValue()">
+                Contenido con badge
+            </p>
+
+            <p>
+                <o-button (click)="changeBadge(1)">
+                    Aumentar
+                </o-button>
+
+                <o-button (click)="changeBadge(-1)">
+                    Reducir
+                </o-button>
+            </p>
+        </o-code-content>
+    </o-tab>
+</o-tabs>
