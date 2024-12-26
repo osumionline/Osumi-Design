@@ -1,0 +1,15 @@
+.o-code-content {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 6px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+
+        span {
+            flex: 1;
+            font-weight: bold;
+        }
+    }
+}

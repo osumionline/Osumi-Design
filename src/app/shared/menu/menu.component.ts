@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, InputSignal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { OListItemComponent } from '../../components/o-list-item/o-list-item.component';
 import { OListComponent } from '../../components/o-list/o-list.component';
@@ -19,6 +19,7 @@ import { OButtonIconComponent } from './../../components/o-button-icon/o-button-
 })
 export class MenuComponent {
   list: DesignComponentInterface[] = modelList;
+  selected: InputSignal<string> = input.required<string>();
 
   toggle(item: DesignComponentInterface): void {
     item.visible = !item.visible;

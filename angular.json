@@ -32,7 +32,11 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss", "src/app/styles/o-design.scss"],
+            "styles": [
+              "src/styles.scss",
+              "./node_modules/highlight.js/styles/github.css",
+              "src/app/styles/o-design.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -90,7 +94,11 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss", "src/app/styles/o-design.scss"],
+            "styles": [
+              "src/styles.scss",
+              "./node_modules/highlight.js/styles/github.css",
+              "src/app/styles/o-design.scss"
+            ],
             "scripts": []
           }
         },

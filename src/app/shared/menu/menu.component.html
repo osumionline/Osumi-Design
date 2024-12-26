@@ -1,6 +1,6 @@
 <o-list>
     @for (item of list; track item.tag) {
-    <o-list-item>
+    <o-list-item [selected]="selected() === item.tag">
         <a [routerLink]="['/component', item.tag]"
            [title]="item.title">
             {{ item.name }}
@@ -15,7 +15,7 @@
     </o-list-item>
     @for (subitem of item.children; track subitem.tag) {
     @if (subitem.visible) {
-    <o-list-item>
+    <o-list-item [selected]="selected() === subitem.tag">
         <a [routerLink]="['/component', subitem.tag]"
            [title]="subitem.title"
            class="o-list-item-sub">

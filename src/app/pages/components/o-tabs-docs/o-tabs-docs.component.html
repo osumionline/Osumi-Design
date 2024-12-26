@@ -1,0 +1,101 @@
+<o-tabs>
+    <o-tab label="Descripción">
+        <h1>OTabs</h1>
+
+        <p>
+            OTabs es un componente que permite mostrar contenido en pestañas. Cada pestaña tiene un título y un contenido asociado.
+        </p>
+
+        <pre class="code-sample"><code [highlightAuto]="code" lineNumbers></code></pre>
+
+        <h2>Eventos</h2>
+
+        <p>
+            El componente OTabs emite un evento cuando se selecciona una pestaña. El evento es de tipo <code>number</code> y contiene la pestaña seleccionada.
+        </p>
+
+        <pre class="code-sample"><code [highlightAuto]="codeEvents" lineNumbers></code></pre>
+
+        <div class="code-sample">
+            <o-tabs (selectedTabChange)="onTabSelected($event)">
+                <o-tab label="Pestaña 1">
+                    <p>Contenido pestaña 1</p>
+                </o-tab>
+                <o-tab label="Pestaña 2">
+                    <p>Contenido pestaña 2</p>
+                </o-tab>
+            </o-tabs>
+            <p>Pestaña elegida: {{ selectedTab() }}</p>
+        </div>
+    </o-tab>
+    <o-tab label="API">
+        <h1>Referencia de API para OTabs</h1>
+
+        <div class="code-sample text">
+            import &#123; OTabsComponent, OTabComponent &#125; from '&#64;osumi/design';
+        </div>
+
+        <p>
+            <strong>OTabsComponent</strong>: Componente que contiene las pestañas.
+        </p>
+
+        <table class="api-properties-table">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-property">
+                        <div class="property-type">&#64;Output()</div>
+                        <div class="property-name">selectedTabChange: number</div>
+                    </td>
+                    <td class="col-description">
+                        Evento lanzado al cambiar de pestaña. Contiene el índice de la pestaña seleccionada.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            <strong>OTabComponent</strong>: Componente para alojar el contenido de una pestaña concreta.
+        </p>
+
+        <table class="api-properties-table">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-property">
+                        <div class="property-type">&#64;Input()</div>
+                        <div class="property-name">label: string</div>
+                    </td>
+                    <td class="col-description">
+                        Título de la pestaña.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </o-tab>
+    <o-tab label="Ejemplos">
+        <h1>Ejemplos</h1>
+
+        <o-code-content [data]="exampleData">
+            <o-tabs (selectedTabChange)="onTabSelected($event)">
+                <o-tab label="Pestaña 1">
+                    <p>Contenido 1</p>
+                </o-tab>
+                <o-tab label="Pestaña 2">
+                    <p>Contenido 2</p>
+                </o-tab>
+            </o-tabs>
+            <p>Pestaña elegida: {{ selectedTab() }}</p>
+        </o-code-content>
+    </o-tab>
+</o-tabs>
