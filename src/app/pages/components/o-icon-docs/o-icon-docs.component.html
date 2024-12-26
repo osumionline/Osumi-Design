@@ -1,8 +1,36 @@
-<p>
-    <o-icon src="img/search.png" />
-</p>
+<o-tabs>
+    <o-tab label="Descripción">
+        <h1>OIcon</h1>
 
-<p>
-    <o-icon src="img/sync.svg"
-            class="red-icon" />
-</p>
+        <p>
+            OIcon es un componente que permite mostrar imágenes como iconons. En el caso de cargar imágenes en formato SVG, se pueden personalizar usando clases CSS.
+        </p>
+
+        <pre class="code-sample"><code [highlightAuto]="code" lineNumbers></code></pre>
+    </o-tab>
+    <o-tab label="API">
+        <h1>Referencia de API para OIcon</h1>
+
+        <div class="code-sample text">
+            import &#123; OIconComponent &#125; from '&#64;osumi/design';
+        </div>
+
+        <p>
+            <strong>OIconComponent</strong>: Componente que permite cargar imágenes como iconos.
+        </p>
+    </o-tab>
+    <o-tab label="Ejemplos">
+        <h1>Ejemplos</h1>
+
+        <o-code-content [data]="exampleData">
+            <p>
+                <o-icon src="img/search.png" />
+            </p>
+
+            <p>
+                <o-icon src="img/sync.svg"
+                        class="red-icon" />
+            </p>
+        </o-code-content>
+    </o-tab>
+</o-tabs>

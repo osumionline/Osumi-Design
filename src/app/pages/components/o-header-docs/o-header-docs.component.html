@@ -1,6 +1,34 @@
-<div class="box">
-    <o-header>
-        This is a header
-    </o-header>
-    Content
-</div>
+<o-tabs>
+    <o-tab label="Descripción">
+        <h1>OHeader</h1>
+
+        <p>
+            OHeader es un componente que permite mostrar bloques de cabeceras. Puede usarse como cabecera de una página o de un bloque.
+        </p>
+
+        <pre class="code-sample"><code [highlightAuto]="code" lineNumbers></code></pre>
+    </o-tab>
+    <o-tab label="API">
+        <h1>Referencia de API para OTabs</h1>
+
+        <div class="code-sample text">
+            import &#123; OHeaderComponent &#125; from '&#64;osumi/design';
+        </div>
+
+        <p>
+            <strong>OHeaderComponent</strong>: Componente que muestra las cabeceras.
+        </p>
+    </o-tab>
+    <o-tab label="Ejemplos">
+        <h1>Ejemplos</h1>
+
+        <o-code-content [data]="exampleData">
+            <div class="box">
+                <o-header>
+                    Esto es una cabecera
+                </o-header>
+                Contenido
+            </div>
+        </o-code-content>
+    </o-tab>
+</o-tabs>
