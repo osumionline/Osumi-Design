@@ -1,13 +1,35 @@
-<p>
-    <o-button (click)="alert('hi!')"
-              class="another"
-              [loading]="loading()">
-        button!
-    </o-button>
-</p>
+<o-tabs>
+    <o-tab label="Descripción">
+        <h1>OButton</h1>
 
-<p>
-    <o-button (click)="toggleLoading()">
-        toggle
-    </o-button>
-</p>
+        <p>OButton es un componente que permite crear botones personalizados con diversas funcionalidades. </p>
+    </o-tab>
+    <o-tab label="API">
+        <h1>Referencia de API para OButton</h1>
+
+        <div class="code-sample text">
+            import &#123; OButtonComponent &#125; from '&#64;osumi/design';
+        </div>
+
+        <p>
+            <strong>OButtonComponent</strong>: Componente que muestra el botón.
+        </p>
+    </o-tab>
+    <o-tab label="Ejemplos">
+        <h1>Ejemplos</h1>
+
+        <p>
+            <o-button (click)="alert('hi!')"
+                      class="another"
+                      [loading]="loading()">
+                button!
+            </o-button>
+        </p>
+
+        <p>
+            <o-button (click)="toggleLoading()">
+                toggle loading
+            </o-button>
+        </p>
+    </o-tab>
+</o-tabs>
