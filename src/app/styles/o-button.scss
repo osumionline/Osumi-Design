@@ -4,7 +4,7 @@
     .o-button {
         user-select: none;
         box-sizing: border-box;
-        color: #1a1a1a;
+        color: var(--o-black-alt);
         cursor: pointer;
         font-size: 16px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -16,22 +16,20 @@
         transition: all .4s ease-in-out;
         display: inline-flex;
         padding: 6px 8px;
-        background: none;
-        border: 1px solid #1a1a1a;
+        background-color: var(--o-background);
+        border: 1px solid var(--o-black-alt);
         line-height: 1.45;
         outline: 0;
-        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, .2),
-            0px 1px 1px 0px rgba(0, 0, 0, .14),
-            0px 1px 3px 0px rgba(0, 0, 0, .12);
+        box-shadow: var(--o-box-shadow);
 
         &:hover {
-            background-color: #000;
-            color: #fff;
+            background-color: var(--o-light-purple-alt);
+            color: var(--o-white);
         }
 
         &:disabled {
-            background-color: #ccc !important;
-            color: #000;
+            background-color: var(--o-gray-dark) !important;
+            color: var(--o-light-gray-alt);
             cursor: default;
             pointer-events: none;
         }

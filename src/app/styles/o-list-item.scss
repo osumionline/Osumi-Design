@@ -6,7 +6,7 @@
     align-items: center;
 
     &.o-list-item--selected {
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: var(--o-light-gray-alt);
     }
 
     &__content {
@@ -22,17 +22,17 @@
 
         a {
             text-decoration: none;
-            color: #1a1a1a;
             display: flex;
             flex: 1;
             height: 100%;
             align-items: center;
             padding: 0 16px;
             box-sizing: border-box;
+            color: var(--o-black-alt);
 
             &:hover {
-                color: #000;
-                background-color: rgba(0, 0, 0, 0.1);
+                color: var(--o-black-alt);
+                background-color: var(--o-light-gray-alt);
             }
 
             &.o-list-item-sub {
@@ -45,7 +45,7 @@
                     left: 16px;
                     width: 2px;
                     height: 100%;
-                    background-color: #000;
+                    background-color: var(--o-black-alt);
                 }
             }
         }

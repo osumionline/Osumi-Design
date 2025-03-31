@@ -19,8 +19,8 @@
     overflow: hidden;
     white-space: nowrap;
     pointer-events: none;
-    background-color: #ba1a1a;
-    color: #fff;
+    background-color: var(--o-red);
+    color: var(--o-white);
     border-radius: 50%;
     box-sizing: border-box;
 }

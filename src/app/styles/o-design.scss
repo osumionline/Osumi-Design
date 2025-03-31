@@ -13,3 +13,32 @@
 @use 'o-list-item';
 @use 'o-tab';
 @use 'o-tabs';
+
+:root {
+    color-scheme: light dark;
+    --o-red: #ba1a1a;
+    --o-white: #fff;
+    --o-black: #0f1219;
+    --o-blue: #2337ff;
+    --o-light-purple: #60739f;
+    --o-dark-purple: #1a1b26;
+    --o-light-gray: #e5e9f0;
+    --o-dark-gray: #262a33;
+
+    --o-background: light-dark(var(--o-white), var(--o-dark-purple));
+    --o-white-alt: light-dark(var(--o-white), var(--o-black));
+    --o-black-alt: light-dark(var(--o-black), var(--o-white));
+    --o-light-gray-alt: light-dark(var(--o-light-gray), var(--o-dark-gray));
+    --o-accent: light-dark(var(--o-blue), var(--o-light-purple));
+    --o-light-purple-alt: light-dark(var(--o-black), var(--o-light-purple));
+    --o-box-shadow: light-dark(0 2px 6px rgba(96, 115, 159, 0.25),
+            0 2px 6px rgba(0, 0, 0, 0.4));
+
+    &[data-theme='dark'] {
+        color-scheme: dark;
+    }
+
+    &[data-theme='light'] {
+        color-scheme: light;
+    }
+}

@@ -6,3 +6,5 @@ export interface DesignComponentInterface {
   children: DesignComponentInterface[];
   visible?: boolean;
 }
+
+export type Theme = 'light' | 'dark' | 'system';

@@ -1,0 +1,80 @@
+.theme-controls {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.theme-toggle {
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--o-black-alt);
+    fill: var(--o-black-alt);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: var(--o-accent);
+        background: var(--o-light-gray-alt);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px var(--o-accent);
+    }
+}
+
+#theme-popover {
+    padding: 0.75rem;
+    border-radius: 12px;
+    box-shadow: var(--o-box-shadow);
+    background: var(--o-background);
+    border: 1px solid var(--o-light-gray-alt);
+    inset: unset;
+    right: 0;
+    top: 48px;
+    min-width: 200px;
+}
+
+.theme-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: var(--o-black-alt);
+    fill: var(--o-black-alt);
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: var(--o-light-gray-alt);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px var(--o-accent);
+    }
+
+    &.selected {
+        background: var(---o-light-gray-alt);
+        color: var(--o-accent);
+        fill: var(--o-accent);
+    }
+}

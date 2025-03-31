@@ -1,0 +1,39 @@
+<div class="theme-controls">
+      <button id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Toggle theme"
+              popovertarget="theme-popover"
+              popovertargetaction="toggle">
+            @if (isDarkMode()) {
+            <o-icon src="/img/dark_mode.svg"
+                    title="Cambiar modo" />
+            }
+            @else {
+            <o-icon src="/img/light_mode.svg"
+                    title="Cambiar modo" />
+            }
+      </button>
+      <div id="theme-popover"
+           popover>
+            <div class="theme-options">
+                  <button class="theme-option"
+                          [class.selected]="currentTheme() === 'light'"
+                          (click)="updateTheme('light')">
+                        <o-icon src="/img/light_mode.svg" />
+                        Light
+                  </button>
+                  <button class="theme-option"
+                          [class.selected]="currentTheme() === 'dark'"
+                          (click)="updateTheme('dark')">
+                        <o-icon src="/img/dark_mode.svg" />
+                        Dark
+                  </button>
+                  <button class="theme-option"
+                          [class.selected]="currentTheme() === 'system'"
+                          (click)="updateTheme('system')">
+                        <o-icon src="/img/system_mode.svg" />
+                        System
+                  </button>
+            </div>
+      </div>
+</div>

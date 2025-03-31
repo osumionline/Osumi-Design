@@ -1,5 +1,6 @@
 .o-button-icon {
-    background-color: #fff;
+    color: var(--o-black-alt);
+    background-color: var(--o-white);
     border: 0;
     width: 40px;
     height: 40px;
@@ -9,8 +10,17 @@
     border-radius: 50%;
     transition: all .4s ease-in-out;
 
+    svg {
+        fill: var(--o-black);
+    }
+
     &:hover {
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: var(--o-accent);
+
+        svg {
+            fill: var(--o-white);
+        }
+
         cursor: pointer;
     }
 
@@ -19,10 +29,14 @@
     }
 
     &:disabled {
-        background-color: #ccc !important;
-        color: #000;
+        background-color: var(--o-light-gray-alt) !important;
+        color: var(--o-white);
         cursor: default;
         pointer-events: none;
+
+        svg {
+            fill: var(--o-black-alt);
+        }
     }
 }
 

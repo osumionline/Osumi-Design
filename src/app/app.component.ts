@@ -9,12 +9,19 @@ import {
 import { filter } from 'rxjs/operators';
 import { OHeaderComponent } from './components/o-header/o-header.component';
 import { MenuComponent } from './shared/menu/menu.component';
+import ThemeSwitcherComponent from './shared/theme-switcher/theme-switcher.component';
 
 @Component({
   selector: 'o-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [OHeaderComponent, RouterOutlet, RouterLink, MenuComponent],
+  imports: [
+    OHeaderComponent,
+    RouterOutlet,
+    RouterLink,
+    MenuComponent,
+    ThemeSwitcherComponent,
+  ],
 })
 export default class AppComponent implements OnInit {
   private router: Router = inject(Router);
