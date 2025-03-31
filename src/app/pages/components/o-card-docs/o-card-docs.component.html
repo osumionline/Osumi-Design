@@ -1,1 +1,71 @@
-<p>o-card-docs works!</p>
+<o-tabs>
+    <o-tab label="Descripción">
+        <h1>OCard</h1>
+
+        <p>
+            OCard es un componente que permite mostrar información agrupada por tarjetas o bloques.
+        </p>
+
+        <o-card>
+            <o-card-header>
+                OCard - Cabecera
+            </o-card-header>
+            <o-card-content>
+                Contenido del bloque
+            </o-card-content>
+            <o-card-footer>
+                Pie del bloque
+            </o-card-footer>
+        </o-card>
+
+        <pre class="code-sample"><code [highlightAuto]="code" lineNumbers></code></pre>
+    </o-tab>
+    <o-tab label="API">
+        <h1>Referencia de API para OCard</h1>
+
+        <div class="code-sample text">
+            import &#123; OCardComponent &#125; from '&#64;osumi/design';
+        </div>
+
+        <p>
+            <strong>OCardComponent</strong>: Componente que muestra el bloque.
+        </p>
+
+        <table class="api-properties-table">
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-property">
+                        <div class="property-type">&#64;Input()</div>
+                        <div class="property-name">value: string</div>
+                    </td>
+                    <td class="col-description">
+                        Valor del badge.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </o-tab>
+    <o-tab label="Ejemplos">
+        <h1>Ejemplos</h1>
+
+        <o-code-content [data]="exampleData">
+            <o-card>
+                <o-card-header>
+                    OCard - Cabecera
+                </o-card-header>
+                <o-card-content>
+                    Contenido del bloque
+                </o-card-content>
+                <o-card-footer>
+                    Pie del bloque
+                </o-card-footer>
+            </o-card>
+        </o-code-content>
+    </o-tab>
+</o-tabs>

@@ -13,9 +13,11 @@
             <o-tab label="TS">
                 <pre class="code-sample"><code [highlightAuto]="data().codeTS" lineNumbers></code></pre>
             </o-tab>
+            @if (data().codeCSS) {
             <o-tab label="CSS">
                 <pre class="code-sample"><code [highlightAuto]="data().codeCSS" lineNumbers></code></pre>
             </o-tab>
+            }
         </o-tabs>
     </div>
     }

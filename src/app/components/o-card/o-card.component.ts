@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'o-o-card',
+  selector: 'o-card',
   imports: [],
   templateUrl: './o-card.component.html',
 })
