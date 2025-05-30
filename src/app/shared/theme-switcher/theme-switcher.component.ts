@@ -1,7 +1,7 @@
-import { DOCUMENT } from '@angular/common';
 import {
   Component,
   computed,
+  DOCUMENT,
   inject,
   OnDestroy,
   OnInit,
