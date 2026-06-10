@@ -1,11 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Service } from '@angular/core';
 import { Observable, of, Subscriber } from 'rxjs';
 import { catchError, shareReplay, switchMap } from 'rxjs/operators';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Service()
 export class OIconProviderService {
   private http: HttpClient = inject(HttpClient);
 
@@ -37,7 +35,7 @@ export class OIconProviderService {
         console.error(`Error loading SVG icon ${id}: ${error}`);
         return of(''); // Retornamos un string vacío si falla la carga
       }),
-      shareReplay(1) // Cacheamos el resultado
+      shareReplay(1), // Cacheamos el resultado
     );
   }
 
@@ -51,7 +49,7 @@ export class OIconProviderService {
         // Convertimos el Blob en una URL base64
         return this.convertBlobToBase64(blob);
       }),
-      shareReplay(1) // Cacheamos el resultado
+      shareReplay(1), // Cacheamos el resultado
     );
   }
 

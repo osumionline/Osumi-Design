@@ -17,16 +17,14 @@ import { OLoadingComponent } from '../o-loading/o-loading.component';
   styleUrl: './o-button.component.scss',
 })
 export class OButtonComponent {
-  type: InputSignal<OButtonTypeInterface> =
-    input<OButtonTypeInterface>('button');
-  disabled: InputSignal<OButtonDisabledInterface> =
-    input<OButtonDisabledInterface>(false);
+  type: InputSignal<OButtonTypeInterface> = input<OButtonTypeInterface>('button');
+  disabled: InputSignal<OButtonDisabledInterface> = input<OButtonDisabledInterface>(false);
   name: InputSignal<OButtonNameInterface> = input<OButtonNameInterface>('');
   id: InputSignal<OButtonIdInterface> = input<OButtonIdInterface>('');
   class: InputSignal<OButtonClassInterface> = input<OButtonClassInterface>('');
 
   buttonClass: Signal<OButtonClassInterface> = computed(
-    (): OButtonClassInterface => `o-button ${this.class()}`
+    (): OButtonClassInterface => `o-button ${this.class()}`,
   );
 
   href: InputSignal<string[]> = input<string[]>([]);

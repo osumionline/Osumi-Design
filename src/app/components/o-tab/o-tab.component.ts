@@ -1,10 +1,4 @@
-import {
-  Component,
-  input,
-  InputSignal,
-  TemplateRef,
-  viewChild,
-} from '@angular/core';
+import { Component, input, InputSignal, TemplateRef, viewChild } from '@angular/core';
 
 @Component({
   selector: 'o-tab',

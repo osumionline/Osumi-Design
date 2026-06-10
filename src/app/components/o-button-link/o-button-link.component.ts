@@ -16,9 +16,7 @@ export class OButtonLinkComponent {
 
   buttonClass: Signal<string> = computed(
     (): string =>
-      'o-button ' +
-      this.class() +
-      (this.loading() || this.disabled() ? ' o-button-disabled' : '')
+      'o-button ' + this.class() + (this.loading() || this.disabled() ? ' o-button-disabled' : ''),
   );
 
   href: InputSignal<string[]> = input<string[]>([]);

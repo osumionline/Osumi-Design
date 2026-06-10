@@ -32,9 +32,7 @@ export default class ThemeSwitcherComponent implements OnInit, OnDestroy {
 
   // Signals for reactive state management
   protected readonly currentTheme: WritableSignal<Theme> = signal<Theme>(
-    (this.document.defaultView?.localStorage.getItem(
-      'theme'
-    ) as Theme | null) || 'system'
+    (this.document.defaultView?.localStorage.getItem('theme') as Theme | null) || 'system',
   );
 
   // Computed signals for derived state
@@ -46,7 +44,7 @@ export default class ThemeSwitcherComponent implements OnInit, OnDestroy {
   });
 
   protected readonly isDarkMode: Signal<boolean> = computed(
-    (): boolean => this.effectiveTheme() === 'dark'
+    (): boolean => this.effectiveTheme() === 'dark',
   );
 
   ngOnInit(): void {
@@ -65,10 +63,7 @@ export default class ThemeSwitcherComponent implements OnInit, OnDestroy {
       throw new Error('Prefers color scheme not supported');
     }
     // Clean up event listener
-    this.prefersColorScheme.removeEventListener(
-      'change',
-      this.mediaQueryListener
-    );
+    this.prefersColorScheme.removeEventListener('change', this.mediaQueryListener);
   }
 
   protected updateTheme(theme: Theme): void {
@@ -77,11 +72,7 @@ export default class ThemeSwitcherComponent implements OnInit, OnDestroy {
     }
     this.currentTheme.set(theme);
 
-    this.renderer.setAttribute(
-      this.document.documentElement,
-      'data-theme',
-      theme
-    );
+    this.renderer.setAttribute(this.document.documentElement, 'data-theme', theme);
 
     // Update localStorage
     if (theme === 'system') {

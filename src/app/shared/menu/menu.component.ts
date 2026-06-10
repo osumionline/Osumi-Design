@@ -8,12 +8,7 @@ import { OButtonIconComponent } from './../../components/o-button-icon/o-button-
 
 @Component({
   selector: 'o-menu',
-  imports: [
-    RouterLink,
-    OListComponent,
-    OListItemComponent,
-    OButtonIconComponent,
-  ],
+  imports: [RouterLink, OListComponent, OListItemComponent, OButtonIconComponent],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',
 })

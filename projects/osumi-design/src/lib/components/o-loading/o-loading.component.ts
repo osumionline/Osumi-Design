@@ -2,12 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'o-loading',
-  template: `<svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  template: `<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <style>
       .spinner_ajPY {
         transform-origin: center;

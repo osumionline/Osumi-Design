@@ -1,10 +1,4 @@
-import {
-  Component,
-  input,
-  InputSignal,
-  signal,
-  WritableSignal,
-} from '@angular/core';
+import { Component, input, InputSignal, signal, WritableSignal } from '@angular/core';
 import { HighlightAuto } from 'ngx-highlightjs';
 import { HighlightLineNumbers } from 'ngx-highlightjs/line-numbers';
 import { OButtonIconComponent } from '../o-button-icon/o-button-icon.component';

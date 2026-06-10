@@ -24,12 +24,7 @@ export class OIconComponent implements OnInit {
     if (this.isSVG) {
       this.iconSVG$ = this.iconProvider
         .getIcon(this.src())
-        .pipe(
-          map(
-            (icon: string): SafeHtml =>
-              this.sanitizer.bypassSecurityTrustHtml(icon)
-          )
-        );
+        .pipe(map((icon: string): SafeHtml => this.sanitizer.bypassSecurityTrustHtml(icon)));
     } else {
       this.iconImage$ = this.iconProvider.getIcon(this.src());
     }

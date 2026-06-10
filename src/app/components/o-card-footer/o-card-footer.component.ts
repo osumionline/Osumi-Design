@@ -8,7 +8,5 @@ type AlignOption = 'left' | 'center' | 'right';
   templateUrl: './o-card-footer.component.html',
 })
 export class OCardFooterComponent {
-  align: InputSignal<AlignOption | undefined> = input<AlignOption | undefined>(
-    undefined
-  );
+  align: InputSignal<AlignOption | undefined> = input<AlignOption | undefined>(undefined);
 }

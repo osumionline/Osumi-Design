@@ -15,8 +15,6 @@ export class OButtonIconComponent {
 
   buttonClass: Signal<string> = computed(
     (): string =>
-      'o-button-icon ' +
-      this.class() +
-      (this.disabled() ? ' o-button-icon-disabled' : '')
+      'o-button-icon ' + this.class() + (this.disabled() ? ' o-button-icon-disabled' : ''),
   );
 }
